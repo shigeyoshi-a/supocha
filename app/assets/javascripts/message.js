@@ -2,7 +2,7 @@ $(function(){
   function buildHTML(message){
     let html = `<div class="messages__contents__content__main__box">
     <div class="messages__contents__content__main__box__top">
-      <div class="messages__contents__content__main__box__top__image">${message.user_image.to_s}</div>
+      <div class="messages__contents__content__main__box__top__image"></div>
       <div class="messages__contents__content__main__box__top__name">${message.user_nickname}</div>
     </div>
     <div class="messages__contents__content__main__box__bottom">${message.text}</div>
