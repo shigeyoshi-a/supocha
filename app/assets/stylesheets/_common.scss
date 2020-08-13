@@ -1,0 +1,46 @@
+.header {
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  box-shadow:0px 0px 4px ;
+  border-bottom: solid 1px;
+  background-color: #f8f8ff;
+  &__top {
+    height: 40px;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    &__title {
+      text-align: center;
+      line-height: 40px;
+      font-size: 30px;
+    }
+  }
+  &__bottom {
+    height: 40px;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    display: flex;
+    justify-content: space-between;
+    line-height: 40px;
+    &__content {
+    }
+  }
+}
+
+.footer {
+  height: 15px;
+  width: 100%;
+  bottom: 0px;
+  left: 0px;
+  background-color:#f8f8ff;
+  margin: 0 auto;
+  margin-top: 30px;
+  &--dec {
+    font-size: 10px;
+    text-align: center;
+  }
+}

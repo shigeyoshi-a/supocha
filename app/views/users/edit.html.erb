@@ -1,0 +1,28 @@
+<%= form_with(model: @user, local: true) do |form| %>
+  <div class="new__contents">
+    <div class="new__content">
+      <h2>--- プロフィール編集 ---</h2>
+        <div class="new__content__box">
+          <div class="new__content__box__left">名前</div>
+          <div class="new__content__box__right"><%= form.text_field :nickname, placeholder: "例）名前" %></div>
+        </div>
+        <div class="new__content__box">
+          <div class="new__content__box__left">性別</div>
+          <div class="new__content__box__right"><%= form.text_field :sex, placeholder: "例）男性or女性" %></div>
+        </div>
+        <div class="new__content__box">
+          <div class="new__content__box__left">年齢</div>
+          <div class="new__content__box__right"><%= form.text_field :ago, placeholder: "例）20歳" %></div>
+        </div>
+        <div class="new__content__box">
+          <div class="new__content__box__left">画像</div>
+          <div class="new__content__box__image"><%= form.file_field :image %></div>
+        </div>
+        <div class="new__content__box">
+          <div class="new__content__box__left">自己紹介</div>
+          <div class="new__content__box__info"><%= form.text_area :info, placeholder: "例）自己PRなどご自由にお書きください" %></div>
+        </div>
+        <div class="new__content__send"><%= form.submit "編集" %></div>
+    </div>
+  </div>
+<% end %>

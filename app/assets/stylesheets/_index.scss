@@ -1,0 +1,102 @@
+.contents__space {
+  padding-top: 60px;
+}
+.contents{
+  height: 100%;
+  width: 100%;
+  padding-top: 40px;
+  .content__top {
+    height: 40px;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    display: flex;
+    line-height: 40px;
+    text-align: center;
+    background-color: silver;
+    border-radius: 5px ;
+    &__title {
+    }
+    &__name {
+      padding-left: 8px;
+    }
+  }
+  
+  .content {
+    height: 222px;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    color:silver;
+    border :solid 1px;
+    border-radius: 5px ;
+    position: relative;
+    &__image {
+      height: 220px;
+      width: 220px;
+      
+      position: absolute;
+      top: 0px;
+      left: 0px;
+    }
+    &__text {
+      height: 100%;
+      width: 500px;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      &__title {
+        height: 22px;
+        width: 100%;
+        font-size: 22px;
+        line-height: 22px;
+        margin-top: 5px;
+      }
+      &__box {
+        height: 18px;
+        width: 100%;
+        margin-top: 14px;
+        display: flex;
+        font-size: 18px;
+        line-height: 18px;
+        &__title {
+          width: 240px;
+          height: 25px;
+          font-size: 25px;
+        }
+        &__left {
+          width: calc(100%/2);
+        }
+        &__right {
+          width: calc(100%/2);
+          display: flex;
+          justify-content: space-between;
+          &__edit {
+            border: solid 1px;
+            padding-left: 5px;
+            padding-right: 5px;
+            border-radius: 8px ;
+          }
+          &__destroy {
+            border: solid 1px;
+            padding-left: 5px;
+            padding-right: 5px;
+            border-radius: 8px ;
+          }
+        }
+
+      }
+      &__info {
+        height: 100px;
+        width: 100%;
+        margin-top: 10px;
+        font-size: 15px;
+        padding-right: 15px;
+        white-space: normal;
+      }
+    }
+  }
+}

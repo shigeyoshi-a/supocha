@@ -1,0 +1,44 @@
+<%= form_with(model: @post, local: true) do |form| %>
+  <div class="new__contents">
+    <div class="new__content">
+      <h2>--- チーム登録 ---</h2>
+        <div class="new__content__box">
+          <div class="new__content__box__left">チーム名:</div>
+          <div class="new__content__box__right"><%= form.text_field :name, placeholder: "例）チームI" %></div>
+        </div>
+        <div class="new__content__box">
+          <div class="new__content__box__left">画像:</div>
+          <div class="new__content__box__image"><%= form.file_field :image %></div>
+        </div>
+        <div class="new__content__box">
+          <div class="new__content__box__left">種目:</div>
+          <div class="new__content__box__right"><%= form.text_field :discipline, placeholder: "例）バレーボール" %></div>
+        </div>
+        <div class="new__content__box">
+          <div class="new__content__box__left">場所:</div>
+          <div class="new__content__box__right"><%= form.text_field :place, placeholder: "例）東京" %></div>
+        </div>
+        <div class="new__content__box">
+          <div class="new__content__box__left">時間:</div>
+          <div class="new__content__box__right"><%= form.text_field :time, placeholder: "例）18時〜21時" %></div>
+        </div>
+        <div class="new__content__box">
+          <div class="new__content__box__left">年代:</div>
+          <div class="new__content__box__right"><%= form.text_field :age, placeholder: "例）20代〜30代" %></div>
+        </div>
+        <div class="new__content__box">
+          <div class="new__content__box__left">参加費:</div>
+          <div class="new__content__box__right"><%= form.text_field :price, placeholder: "例）500円" %></div>
+        </div>
+        <div class="new__content__box">
+          <div class="new__content__box__left">レベル:</div>
+          <div class="new__content__box__right"><%= form.text_field :level, placeholder: "例）A〜D" %></div>
+        </div>
+        <div class="new__content__box">
+          <div class="new__content__box__left">紹介文:</div>
+          <div class="new__content__box__info"><%= form.text_area :info, placeholder: "例）チーム詳細を記入" %></div>
+        </div>
+        <div class="new__content__send"><%= form.submit "登録" %></div>
+    </div>
+  </div>
+<% end %>

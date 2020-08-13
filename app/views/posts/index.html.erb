@@ -1,0 +1,45 @@
+<div class="contents__space"></div>
+<% @posts.each do |post| %>
+  <div class="contents">
+    <div class="content__top">
+      <div class="content__top__title"><p>アカウント名</p></div>
+      <%= link_to "/users/#{post.user.id}" do%>
+      <div class="content__top__name"><%= post.user.nickname %></div>
+      <% end %>
+    </div>
+    <div class="content">
+    <%= link_to "/posts/#{post.id}", class: 'post' do%>
+      <div class="content__image"><%= image_tag post.image.to_s, :size =>'220x220'%></div>
+      <div class="content__text">
+        <div class="content__text__box">
+          <div class="content__text__box__title">チーム名：<%= post.name %></div>
+          <div class="content__text__box__right">
+          <% if user_signed_in? && current_user.id == post.user_id %>
+              <%= link_to "/posts/#{post.id}/edit" do%>
+                <div class="content__text__box__right__edit">編集</div>
+              <% end %>
+              <%= link_to "/posts/#{post.id}", method: :delete do%>
+                <div class="content__text__box__right__destroy">削除</div>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+        <div class="content__text__box">
+          <div class="content__text__box__left">種目:<%= post.discipline %></div>
+          <div class="content__text__box__right">レベル:<%= post.level %></div>
+        </div>
+        <div class="content__text__box">
+          <div class="content__text__box__left">時間:<%= post.time %></div>
+          <div class="content__text__box__right">場所:<%= post.place %></div>
+        </div>
+        <div class="content__text__box">
+          <div class="content__text__box__left">年代:<%= post.age %></div>
+          <div class="content__text__box__right">参加費:<%= post.price %></div>
+        </div>
+        <div class="content__text__info"><%= post.info %></div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+<% end %>
+<%= paginate(@posts) %>

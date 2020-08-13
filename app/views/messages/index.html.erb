@@ -1,0 +1,24 @@
+<div class="messages__contents">
+  <div class="messages__contents__content">
+    <div class="messages__contents__content__header">チーム名　<%= @post[:name] %></div>
+    <div class="messages__contents__content__main">
+    <% @messages.each do |message| %>
+      <div class="messages__contents__content__main__box">
+        <div class="messages__contents__content__main__box__top">
+          <div class="messages__contents__content__main__box__top__image"><%= image_tag message.user.image.to_s, :size =>'29x29'%></div>
+          <div class="messages__contents__content__main__box__top__name"><%= message.user.nickname %></div>
+        </div>
+        <div class="messages__contents__content__main__box__bottom"><%= message.text %></div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+    <%= form_with(model: [@post,@message],local: true, id: "new_message") do |form| %>
+    <div class="messages__form">
+      <div class="messages__form__box">
+        <div class="messages__form__box__text" ><%= form.text_area :text, placeholder: "メッセージを入力してね" , class: "textbox"%></div>
+        <div class="messages__form__box__submit"><%= form.submit "送信" , class: "form__submit" %></div>
+      </div>
+    </div>
+    <% end %>

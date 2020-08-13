@@ -1,0 +1,43 @@
+<div class="show__contents">
+  <div class="show__content">
+    <div class="show__content__image"><%= image_tag @post.image.to_s , :size =>'200x200'%></div>
+    <div class="show__content__box">
+      <div class="show__content__box__left">チーム名</div>
+      <div class="show__content__box__right"><%= @post.name %></div>
+    </div>
+    <div class="show__content__box">
+      <div class="show__content__box__left">種目</div>
+      <div class="show__content__box__right"><%= @post.discipline %></div>
+    </div>
+    <div class="show__content__box">
+      <div class="show__content__box__left">場所</div>
+      <div class="show__content__box__right"><%= @post.place %></div>
+    </div>
+     <div class="show__content__box">
+      <div class="show__content__box__left">時間</div>
+      <div class="show__content__box__right"><%= @post.time %></div>
+    </div>
+     <div class="show__content__box">
+      <div class="show__content__box__left">年代</div>
+      <div class="show__content__box__right"><%= @post.age %></div>
+    </div>
+    <div class="show__content__box">
+      <div class="show__content__box__left">参加費</div>
+      <div class="show__content__box__right"><%= @post.price %></div>
+    </div>
+    <div class="show__content__box">
+      <div class="show__content__box__left">レベル</div>
+      <div class="show__content__box__right"><%= @post.level %></div>
+    </div>
+    <div class="show__content__text"><%= @post.info %></div>
+    <% if user_signed_in? %>
+      <%= link_to "/posts/#{params[:id]}/messages", class: 'post' do%>
+      <div class="show__content__message">
+        <div class="show__content__message__button">応募</div>
+      </div>
+      <% end %>
+    <% else %>
+    　<div class="show__content__message__login">＊＊＊　応募するためにはログインまたは新規登録が必要です　＊＊＊</div>
+    <% end %>
+  </div>
+</div>

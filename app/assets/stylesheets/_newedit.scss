@@ -1,0 +1,47 @@
+.new__contents {
+  height: 100%;
+  width: 100%;
+}
+
+.new__content {
+  max-width: 750px;
+  margin: 0 auto;
+  &__box {
+    width: 350px;
+    height: 26px;
+    display: flex;
+    justify-content: space-between;
+    margin:  0 auto;
+    margin-top: 15px;
+    &__left {
+      width: 100px;
+      text-align: right;
+      line-height: 50px;
+      padding-right: 10px;
+    }
+    &__right {
+      width: 250px;
+      height: 100%;
+      line-height: 50px;
+      font-size: 20px;
+    }
+    &__info {
+      width: 250px;
+      height: 150px;
+      line-height: 50px;
+      font-size: 20px;
+      margin-top: 15px;
+    }
+    &__image {
+      line-height: 50px;
+    }
+  }
+  &__send{
+    height: 50px;
+    margin:  0 auto;
+    text-align: center;
+    line-height: 50px;
+    margin-top: 150px;
+  }
+}
+
